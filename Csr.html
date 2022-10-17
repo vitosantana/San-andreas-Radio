@@ -26,10 +26,10 @@
 
         <!--song image-->
         <img id= "track_image">
-        <div class="volumn">
-        <p id= "volumn_show">90</p>
-        <i class="fa-solid fa-volume-high" id="volumn_icon" onclick="mute_sound()"></i>
-        <input type="range" min="0" max="100" value="90" onchange="volumn_change()">
+        <div class="volume">
+        <p id= "volume_show">90</p>
+        <i class="fa-solid fa-volume-high" id="volume_icon" onclick="mute_sound()"></i>
+        <input type="range" min="0" max="100" value="90" onchange="volume_change()"  id="volume">
 
     </div>
 </div>
@@ -60,5 +60,9 @@
     <button id="auto" onclick="autoplay_switch()">Autoplay <i class="fa-solid fa-circle-notch"></i></button>
 </div>
 </div>
+
+    <!--Javascript-->
+
+    <script src="Csr.js"></script>
 </body>
 </html>
