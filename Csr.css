@@ -14,7 +14,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: black;
-  background: url(Images/Diamond.gif);
+  background: url('https://static.wikia.nocookie.net/aesthetics/images/a/aa/39c0d31bd8b00436c8804fdff528c142.jpg/revision/latest/scale-to-width-down/250?cb=20210329165136');
   
 }
 
@@ -74,7 +74,7 @@ flex-direction: column;
 
 /* both range slider */
 
-input[type="range"] {
+input[type="range"]  {
   -webkit-appearance: none;
   width: 50%;
   outline: none;
@@ -248,3 +248,10 @@ font-size: 20px;
 .right .show_song_no p:nth-child(2) {
   margin: 0 5px;
 }
+
+
+.current-time,
+.total-duration {
+  padding: 10px;
+}
+ 

@@ -11,6 +11,9 @@ let auto_play = document.querySelector('#auto');
 let present = document.querySelector('#present');
 let total = document.querySelector('#total');
 let artist = document.querySelector('#artist');
+let curr_time = document.querySelector(".current-time");
+let total_duration = document.querySelector(".total-duration");
+
 
 let timer;
 let autoplay = 0;
@@ -23,6 +26,8 @@ let playing_song = false;
 
 let track = document.createElement('audio');
 
+
+
 //All songs list
 
 let All_song = [
@@ -32,6 +37,22 @@ let All_song = [
         img: "Images/Csr 103.9.jpg",
         singer: "Aaron Hall"
     },
+
+    {
+        name: "Sensitivity",
+        path: "Audio/Sensitivity_(getmp3.pro).mp3",
+        img: "Images/Csr 103.9.jpg",
+        singer: "Ralph Tresvant"
+    },
+
+    {
+        name: "So you Like",
+        path: "Audio/So_You_Like_What_You_See_(getmp3.pro).mp3",
+        img: "Images/Csr 103.9.jpg",
+        singer: "Samuelle"
+    },
+    
+    
     {
         name: "Don't be Cruel",
         path: "Audio/Bobby_Brown-Dont_Be_Cruel_(getmp3.pro).mp3",
@@ -170,6 +191,21 @@ function range_slider() {
 	if (!isNaN(track.duration)) {
 		position = track.currentTime * (100 / track.duration);
 		slider.value = position;
+         // Calculate the time left and the total duration
+    let currentMinutes = Math.floor(track.currentTime / 60);
+    let currentSeconds = Math.floor(track.currentTime - currentMinutes * 60);
+    let durationMinutes = Math.floor(track.duration / 60);
+    let durationSeconds = Math.floor(track.duration - durationMinutes * 60);
+      // Add a zero to the single digit time values
+      if (currentSeconds < 10) { currentSeconds = "0" + currentSeconds; }
+      if (durationSeconds < 10) { durationSeconds = "0" + durationSeconds; }
+      if (currentMinutes < 10) { currentMinutes = "0" + currentMinutes; }
+      if (durationMinutes < 10) { durationMinutes = "0" + durationMinutes; }
+       // Display the updated duration
+    curr_time.textContent = currentMinutes + ":" + currentSeconds;
+    total_duration.textContent = durationMinutes + ":" + durationSeconds;
+  
+      
 	}
 
     //Function Will Run When The Song Is Over
@@ -184,3 +220,4 @@ function range_slider() {
         }
     }
 }
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Koh+Santepheap&display=swap" rel="stylesheet"> 
+    <title> Master Sounds 98.3</title>
+    <link rel="stylesheet" href="Master Sounds 98.3.css">
+
+  
+</head>
+<body>
+<div class="main">
+    <p id = "logo"><i class="fa-solid fa-music"></i>Master Sounds 98.3 Radio</p>
+
+    <!--- left part -->
+    <div class="left">
+
+        <!--song image-->
+        <img id= "track_image">
+        <div class="volume">
+        <p id= "volume_show">90</p>
+        <i class="fa-solid fa-volume-high" id="volume_icon" onclick="mute_sound()"></i>
+        <input type="range" min="0" max="100" value="90" onchange="volume_change()"  id="volume">
+
+    </div>
+</div>
+<!--right part-->
+<div class="right">
+    <div class="show_song_no">
+        <p id="present">1</p>
+        <p>/</p>
+        <p id="total">5</p>
+    </div>
+
+    <!--song title-->
+    <p id="title">title.mp3</p>
+    <p id="artist">Artist Name</p>
+
+    <!--middle part-->
+    <div class="middle">
+        <button onclick="previous_song()" id="pre"><i class="fa-solid fa-backward-step"></i></button>
+        <button onclick="justplay()" id="play"><i class="fa-solid fa-play"></i></button>
+        <button onclick="next_song()" id="next"><i class="fa-solid fa-forward-step"></i></button>
+    </div>
+
+    <!--song duration part-->
+
+    <div class="duration">
+        <div class="current-time">00:00</div>
+       
+        
+        <input type="range"  min="0" max="100" value="0"  id="duration_slider"  class="seek_slider" onchange="change_duration()">
+
+        <div class="total-duration">00:00</div>
+    </div>
+
+   
+
+
+    
+    
+    <button id="auto" onclick="autoplay_switch()">Autoplay <i class="fa-solid fa-circle-notch"></i></button>
+</div>
+
+
+
+</div>
+
+
+
+
+    <!--Javascript-->
+
+    <script src="Master Sounds 98.3.js"></script>
+</body>
+</html>

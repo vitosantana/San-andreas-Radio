@@ -19,7 +19,7 @@
 </head>
 <body>
 <div class="main">
-    <p id = "logo"><i class="fa-solid fa-music"></i>music</p>
+    <p id = "logo"><i class="fa-solid fa-music"></i>CSR 103:9 Radio</p>
 
     <!--- left part -->
     <div class="left">
@@ -38,7 +38,7 @@
     <div class="show_song_no">
         <p id="present">1</p>
         <p>/</p>
-        <p id="total">3</p>
+        <p id="total">5</p>
     </div>
 
     <!--song title-->
@@ -55,11 +55,28 @@
     <!--song duration part-->
 
     <div class="duration">
-        <input type="range"  min="0" max="100" value="0"  id="duration_slider" onchange="change_duration()">
+        <div class="current-time">00:00</div>
+       
+        
+        <input type="range"  min="0" max="100" value="0"  id="duration_slider"  class="seek_slider" onchange="change_duration()">
+
+        <div class="total-duration">00:00</div>
     </div>
+
+   
+
+
+    
+    
     <button id="auto" onclick="autoplay_switch()">Autoplay <i class="fa-solid fa-circle-notch"></i></button>
 </div>
+
+
+
 </div>
+
+
+
 
     <!--Javascript-->
 
